@@ -1,0 +1,31 @@
+{
+  "name": "jest",
+  "version": "1.0.0",
+  "description": "test jes",
+  "main": "index.js",
+  "scripts": {
+    "test": "jest"
+  },
+  "author": "",
+  "license": "MIT",
+  "dependencies": {
+    "babel-jest": "*",
+    "jest-cli": "^0.5.5",
+    "react": "^0.13.3",
+    "react-tools": "^0.13.3"
+  },
+  "jest": {
+    "scriptPreprocessor": "<rootDir>/node_modules/babel-jest",
+    "testFileExtensions": [
+      "es6",
+      "js"
+    ],
+    "moduleFileExtensions": [
+      "js",
+      "json",
+      "es6",
+      "jsx"
+    ],
+    "unmockedModulePathPatterns": ["<rootDir>/node_modules/react"]
+  }
+}
