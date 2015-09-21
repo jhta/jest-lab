@@ -8,6 +8,9 @@ var CheckboxWithLabel = React.createClass({
             <li>uno</li>
             <li>dos</li>
           </ul>
+          <div className="Text">
+            {this.props.text}
+          </div>
         </div>
     );
   }

@@ -7,7 +7,7 @@ jest.dontMock('../CheckboxWithLabel');
 
 describe('Test component ', () => {
 	const CheckboxWithLabel = require('../CheckboxWithLabel');
-    const checkbox = TestUtils.renderIntoDocument(<CheckboxWithLabel labelOn="On" labelOff="Off" />);
+    const checkbox = TestUtils.renderIntoDocument(<CheckboxWithLabel labelOn="On" text="texto" labelOff="Off" />);
     
     describe('Prueba con un elemento', () => {
         it('deberia renderizar el elemento p y verificar si es igual a "hola"', () => {
@@ -38,6 +38,13 @@ describe('Test component ', () => {
         })
     });
 
+    describe('Probar por clases', () => {
+        it("deberia encontrar un componente por clase y mostrar que su contenido es 'texto'", () => {
+            const text = TestUtils.findRenderedDOMComponentWithClass(checkbox, 'Text');
+            expect(TestUtils.isDOMComponent(text)).toBe(true);
+            expect(React.findDOMNode(text).textContent).toBe("texto");
+        });
+    });
 });
 describe('First Test', function() {
 	it('spec hello world', function() {
