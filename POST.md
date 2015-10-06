@@ -7,7 +7,7 @@ __Jest__ es una framework para Unit Testing basado en __Jasmine__ que como plus 
 - Hace automaticamente  mocks de las dependencias CommonJS:
   puedes declarar modulos __require("modulo")__ en cualquier seccion de tus tests.
 - Encuentra y ejecuta automaticamente los tests:
- al ejecutar el comando __Jest__ automaticamente buscara las carpetas ____tests____  en tu proyecto y ejecutará los test que se encuentren ahi. (El nombre de la carpeta que buscará es configurable)
+ al ejecutar el comando __Jest__ automaticamente buscara las carpetas \_\_tests\_\_  en tu proyecto y ejecutará los test que se encuentren ahi. (El nombre de la carpeta que buscará es configurable)
 - Ejecuta los tests en una implementación falsa del DOM (usando JsDOM) para poder correr los tests desde la consola sin necesidad de correrlas en el navegador.
 
 ## Instalación
