@@ -7,7 +7,7 @@ __Jest__ es una framework para Unit Testing basado en __Jasmine__ que como plus 
 - Hace automaticamente  mocks de las dependencias CommonJS:
   puedes declarar modulos __require("modulo")__ en cualquier seccion de tus tests.
 - Encuentra y ejecuta automaticamente los tests:
- al ejecutar el comando __Jest__ automaticamente buscara las carpetas ____ tests __ __  en tu proyecto y ejecutará los test que se encuentren ahi. (El nombre de la carpeta que buscará es configurable)
+ al ejecutar el comando __Jest__ automaticamente buscara las carpetas ____tests____  en tu proyecto y ejecutará los test que se encuentren ahi. (El nombre de la carpeta que buscará es configurable)
 - Ejecuta los tests en una implementación falsa del DOM (usando JsDOM) para poder correr los tests desde la consola sin necesidad de correrlas en el navegador.
 
 ## Instalación
@@ -25,7 +25,7 @@ Luego instalamos en local las dependencias necesarias para react y jest
 `npm i -D babel-jest jest-cli react`
 
 ## Configuración
-En el package.json debemos de configurar Jest de la siguiente manera:
+En el `package.json` debemos de configurar Jest de la siguiente manera:
 
 
 ```json
@@ -159,7 +159,7 @@ import React from 'react/addons';
 const {TestUtils} = React.addons;
 ```
 
-TestUtils tiene el método __renderIntoDocument__, el que nos permitirá renderizar componentes y generar un DOM "falso" (con JsDOM) a el cual le podemos pasar atributos(props).
+TestUtils tiene el método __renderIntoDocument__, el que nos permitirá renderizar componentes y generar un DOM "falso" (con [JsDOM](https://github.com/tmpvar/jsdom)) a el cual le podemos pasar atributos(props).
 ```js
 const TodoComponent = TestUtils.renderIntoDocument(<TODO defaultText="new task"/>);
 ```
